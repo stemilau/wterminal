@@ -19,5 +19,8 @@ RUN pip install ansible-lint
 COPY src/html /usr/share/nginx/html
 COPY nginx.conf /usr/local/nginx/conf/
 
-# Avoid container exit.
-CMD ["nginx", "-g", "daemon off;"]
+STOPSIGNAL SIGQUIT
+
+# Define entrypoint and default parameters 
+ENTRYPOINT ["/usr/local/nginx/sbin/nginx"]
+CMD ["-g", "daemon off;"]
