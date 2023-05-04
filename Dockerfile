@@ -12,7 +12,7 @@ EXPOSE 80
 
 RUN ["dnf", "update", "-y"]
 
-RUN dnf install -y hostname iproute python3 python3-pip neovim tmux ansible which ncurses
+RUN dnf install -y hostname iproute python3 python3-pip neovim tmux ansible which ncurses nginx
 
 RUN pip install ansible-lint
 
@@ -23,5 +23,4 @@ STOPSIGNAL SIGQUIT
 
 # Define entrypoint and default parameters 
 ENTRYPOINT ["/usr/local/nginx/sbin/nginx"]
-
 CMD ["-g", "daemon off;"]
