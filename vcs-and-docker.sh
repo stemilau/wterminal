@@ -6,8 +6,9 @@ git commit -m "Revision: $(date +%s)" &&
 git push;
 
 
-echo "Building docker image and running it"
+echo "Building docker image"
 docker build -t web-term .
 docker images
+echo "Running docker image"
 docker run -p 8080:80 web-term  
 docker ps
