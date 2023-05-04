@@ -7,7 +7,7 @@ git push;
 
 
 echo "Building docker image and running it"
-docker build -t web-term} .
+docker build -t web-term .
 docker images
 docker run -p 8080:80 web-term  
 docker ps
