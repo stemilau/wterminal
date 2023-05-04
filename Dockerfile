@@ -22,5 +22,5 @@ COPY nginx.conf /usr/local/nginx/conf/
 STOPSIGNAL SIGQUIT
 
 # Define entrypoint and default parameters 
-ENTRYPOINT ["/usr/local/nginx/sbin/nginx"]
-CMD ["-g", "daemon off;"]
+
+CMD ["nginx","-g", "daemon off;"]
