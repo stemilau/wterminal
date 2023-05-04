@@ -22,7 +22,7 @@ RUN dnf install -y hostname iproute python3 python3-pip neovim tmux ansible whic
 RUN pip install ansible-lint
 
 # install xterm.js web terminal emulator
-WORKDIR /usr/app
+WORKDIR /usr/xterm
 RUN npm install xterm
 
 # configure nginx
